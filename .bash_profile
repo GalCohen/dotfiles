@@ -1,4 +1,4 @@
-# allows cd-ing into Aliases - http://superuser.com/questions/253984/mac-terminal-cd-to-a-folder-alias/254005#25400 5
+# allows cd-ing into Aliases - http://superuser.com/questions/253984/mac-terminal-cd-to-a-folder-alias/254005#25400 
 cd() {
   if [[ -f "$1" || -L "$1" ]]; then
       path=$(getTrueName "$1")
@@ -9,6 +9,9 @@ cd() {
   }
 
 
+function cdl(){
+	cd $@; ls ;  
+}
 
 
 # Create a new directory and enter it
