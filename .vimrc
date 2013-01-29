@@ -1,36 +1,38 @@
-set t_Co=256
-"let g:solarized_termcolors=256
-syntax on 		"  syntax highlighting
+" set t_Co=265
+syntax on						"  syntax highlighting
 set background=dark
 let g:solarized_termcolors=256
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+let g:solarized_termtrans = 1
 colorscheme solarized  " jellybeans
+
 let g:checksyntax_auto = 1    " automatically check syntax when file is saved
- 
+
 set nocompatible
 set number                      " line numbers on
-set nowrap 						" wrap long lines
-set tabstop=4 					" an indentation every four columns
+set nowrap						" wrap long lines
+set tabstop=4					" an isndentation every four columns
 set softtabstop=4               " let backspace delete indent
 set shiftwidth=4                  " use indents of 4 spaces
-set expandtab 					" tabs are spaces, not tabs
-set backspace=2                 " make backspace work like in other apps
+set expandtab					" tabs are spaces, not tabstopset
 set pastetoggle=<F2>            " allows text to be pasted with original alignment 
 set autoindent                  " indets each line the same as the previous one
 set smartindent                 " automatically inserts one extra level on indentation
 set shortmess=atI               " short messages and dont show intro
 imap jj <Esc>
-filetype indent on 		
+filetype indent on 
 filetype plugin indent on
 nore ; :
 nore , ;
 set nocompatible
-set showcmd 				" shows nomral mode key presses at the bottom 
-set history=2000			" Store a ton of history (default is 20)
-" set spell					" spell checking on
-set mouse=a  				" automatically enable mouse usage
-set confirm   			" dialog asking to confirm things instead of error
-set ruler 				" show current position at bottm
-set showmatch                   " show matching brackets/parenthesis
+set showcmd " shows nomral mode key presses at the bottom 
+set history=2000				 " Store a ton of history (default is 20)
+" set spell" spell checking on
+set mouse=a						 " automatically enable	mouse usage
+set confirm						" dialog asking to confirm things instead of error
+set ruler						" show current position at bottm
+set showmatch  				    " show matching brackets/parenthesis
 set incsearch                   " find as you type search
 set hlsearch                    " highlight search terms
 set ignorecase                  " case insensitive search
@@ -41,8 +43,8 @@ set foldenable                  " auto fold code"
 set tabpagemax=15               " only show 15 tabs
 set showmode                    " display the current mode
 set cursorline                  " highlight current line
-hi CursorLine cterm=None ctermbg=235 
-hi CursorColumn guibg=#333333  
+" hi CursorLine cterm=None ctermbg=235 
+" hi CursorColumn guibg=#333333  
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
@@ -85,4 +87,4 @@ cmap Tabe tabe
 cmap cwd lcd %:p:h
 cmap cd. lcd %:p:h
 
-cmap w!! w !sudo tee >/dev/null %
+cmap w!! w !sudo tee >/dev/null %"
