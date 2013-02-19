@@ -20,7 +20,6 @@ set pastetoggle=<F2>            " allows text to be pasted with original alignme
 set autoindent                  " indets each line the same as the previous one
 set smartindent                 " automatically inserts one extra level on indentation
 set shortmess=atI               " short messages and dont show intro
-imap jj <Esc>
 filetype indent on 
 filetype plugin indent on
 nore ; :
@@ -77,6 +76,7 @@ map <Space> i<Space><Esc>
 
 au FileType xhtml,xml so ~/.vim/ftplugin/html_autoclosetag.vim
 
+imap jj <Esc>
 cmap W w                        
 cmap WQ wq
 cmap wQ wq

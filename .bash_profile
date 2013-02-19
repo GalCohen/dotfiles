@@ -10,7 +10,7 @@ cd() {
 
 
 function cdl(){
-	cd $@; ls ;  
+	builtin cd "$@"; ls -GpF ;  
 }
 
 

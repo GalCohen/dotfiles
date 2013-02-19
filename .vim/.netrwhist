@@ -1,3 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/Users/galchook26/.config'
+let g:netrw_dirhist_2='/Applications/XAMPP/xamppfiles/htdocs/xampp/php/ajax'
+let g:netrw_dirhist_3='/Users/galchook26/Downloads'
+let g:netrw_dirhist_4='/Users/galchook26/Documents/phonegap-2.4.0/HelloWorld/www'
