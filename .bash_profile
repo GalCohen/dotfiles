@@ -45,6 +45,9 @@ for file in ~/.{bash_prompt,aliases,exports}; do
     [ -r "$file" ] && source "$file"
 done
 
+#instead of .bash_prompt:
+#. /Users/galchook26/Library/Python/2.7/lib/python/site-packages/powerline/bindings/bash/powerline.sh
+
 unset file
 
 # Case-insensitive globbing (used in pathname expansion)

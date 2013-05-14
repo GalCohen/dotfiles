@@ -112,7 +112,8 @@ cmap cd. lcd %:p:h
 
 cmap w!! w !sudo tee >/dev/null %"
 " set t_Co=256
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+" set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+set rtp+=/Users/galchook26/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
 let g:Powerline_symbols = 'fancy'
 set laststatus=2
 

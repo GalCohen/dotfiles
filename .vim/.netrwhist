@@ -1,11 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/galchook26/.vim'
-let g:netrw_dirhist_2='/Users/galchook26/.vim/bundle'
-let g:netrw_dirhist_3='/Users/galchook26/.vim/bundle/nerdtree'
-let g:netrw_dirhist_4='/Users/galchook26/Desktop/Projects/SpireMed/lite/wsgi'
-let g:netrw_dirhist_5='/Users/galchook26/Desktop/Projects/SpireMed/lite/wsgi/templates'
-let g:netrw_dirhist_6='/Users/galchook26/Desktop/Projects/SpireMed/lite/wsgi'
-let g:netrw_dirhist_7='/Users/galchook26/Desktop/Projects/SpireMed/lite/wsgi/templates'
-let g:netrw_dirhist_8='/Users/galchook26/Desktop/Projects/Tutorials/jQuery/anonymousFunctions'
-let g:netrw_dirhist_9='/Users/galchook26/Desktop/Projects/kaos'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/galchook26/Desktop/Projects/Tutorials/jQuery/jqueryUI/explode'
+let g:netrw_dirhist_2='/Users/galchook26/Desktop/Projects/Tutorials/jQuery/jqueryUI/slide'
+let g:netrw_dirhist_3='/Users/galchook26/Desktop/Projects/Tutorials/jQuery/jqueryUI/selectable'
+let g:netrw_dirhist_4='/Users/galchook26/.vim/bundle/cocoa.vim'
+let g:netrw_dirhist_5='/Users/galchook26/.ssh/projects/php/clicktocall'
