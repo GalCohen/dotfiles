@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/galchook26/Desktop/Projects/Tutorials/jQuery/jqueryUI/explode'
-let g:netrw_dirhist_2='/Users/galchook26/Desktop/Projects/Tutorials/jQuery/jqueryUI/slide'
-let g:netrw_dirhist_3='/Users/galchook26/Desktop/Projects/Tutorials/jQuery/jqueryUI/selectable'
-let g:netrw_dirhist_4='/Users/galchook26/.vim/bundle/cocoa.vim'
-let g:netrw_dirhist_5='/Users/galchook26/.ssh/projects/php/clicktocall'
