@@ -1,0 +1,18 @@
+sublime packages - must find better way than git submodules to do this
+- package control
+- tern_for_sublime
+- theme solarized
+- sublimeLinter
+- sublimeREPL
+- sublime-scheme-cycler
+- sublimeBlockCursor / block cursor everywhere
+- docr
+- twig syntax
+- sidebar enhancements
+- markdown
+- macterminal
+- javascript patterns
+- javascript snippet
+- html5 snippets
+- css snippets
+- bower

@@ -26,4 +26,8 @@ export LESS_TERMCAP_md="$ORANGE"
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
 
+# Always enable colored `grep` output
+export GREP_OPTIONS="--color=auto"
+
+export ZEND_TOOL_INCLUDE_PATH=/usr/local/ZendFramework-1.12.3/bin/zf.sh
 export PATH=$PATH:/Users/galchook26/Library/Python/2.7/bin/:/Applications/android-sdk-macosx/platform-tools:/Applications/android-sdk-macosx/tools

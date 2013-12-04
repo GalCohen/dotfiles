@@ -1,4 +1,4 @@
-set encoding=utf-8
+set encoding=utf-8 nobomb
 runtime! autoload/pathogen.vim
 silent! call pathogen#helptags()
 silent! call pathogen#runtime_append_all_bundles()
@@ -28,8 +28,8 @@ filetype indent on
 filetype plugin indent on
 
 " Making it so ; works like : for commands. Saves typing and eliminates :W style typos due to lazy holding shift. 
-" nore ; :
-" nore , ;
+ nore ; :
+ nore , ;
 
 "set backup 						" backups are nice ...
 "set undofile					" so is persistent undo ...
@@ -46,7 +46,7 @@ set showmatch  				    " show matching brackets/parenthesis
 set incsearch                   " find as you type search
 set hlsearch                    " highlight search terms
 set ignorecase                  " case insensitive search
-"set wildmenu 				" Enhance command-line completion
+" set wildmenu 				" Enhance command-line completion
 set whichwrap=b,s,h,l,<,>,[,]   " backspace and cursor keys wrap to
 set scrolljump=5                " lines to scroll when cursor leaves screen
 set scrolloff=3                 " minimum lines to keep above and below cursor
@@ -61,11 +61,14 @@ set cursorline                  " highlight current line
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
 " Allow cursor keys in insert mode
-" set esckeys
+set esckeys
 " Allow backspace in insert mode
 set backspace=indent,eol,start
 " Optimize for fast terminal connections
 set ttyfast
+
+" Add the g flag to search/replace by default
+set gdefault
 
 " Dont add empty newlines at the end of files
 set binary
@@ -73,6 +76,14 @@ set noeol
 
 " Show the filename in the window titlebar
 set title
+
+" Enable per-directory .vimrc files and disable unsafe commands in them
+set exrc
+set secure
+
+" Respect modeline in files
+set modeline
+set modelines=4
 
 " make cursor move as expected with wrapped lines
 inoremap <Down> <C-o>gj
@@ -89,21 +100,28 @@ au FileType xhtml,xml so ~/.vim/bundle/HTML-AutoCloseTag/ftplugin/html_autoclose
 
 au! BufRead,BufNewFile *.json set filetype=json
 
-"augroup json_autocmd 
-"  autocmd! 
-"  autocmd FileType json set autoindent 
-" autocmd FileType json set formatoptions=tcq2l 
-"  autocmd FileType json set textwidth=78 shiftwidth=2 
-"  autocmd FileType json set softtabstop=2 tabstop=8 
-"  autocmd FileType json set expandtab 
-"  autocmd FileType json set foldmethod=syntax 
-" augroup END 
+" Strip trailing whitespace (,ss)
+function! StripWhitespace()
+	let save_cursor = getpos(".")
+	let old_query = getreg('/')
+	:%s/\s\+$//e
+	call setpos('.', save_cursor)
+	call setreg('/', old_query)
+endfunction
+
+" Automatic commands
+if has("autocmd")
+	" Enable file type detection
+	filetype on
+	" Treat .json files as .js
+	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+endif
 
 imap jj <Esc>
 cmap W w                        
 cmap WQ wq
 cmap wQ wq
-cmap wQ wq
+cmap Wq wq
 cmap Q q
 cmap Tabe tabe
 
@@ -115,8 +133,12 @@ cmap w!! w !sudo tee >/dev/null %"
 " set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 set rtp+=/Users/galchook26/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
 let g:Powerline_symbols = 'fancy'
+"
+" Always show status line
 set laststatus=2
 
+" Don’t reset cursor to start of line when moving around.
+set nostartofline
 
 set tabstop=4					" an isndentation every four columns
 set softtabstop=4               " let backspace delete indent
