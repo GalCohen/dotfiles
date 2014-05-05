@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView
+     numberOfItemsInSection:(NSInteger)section
+{
+    return &lt;#numberOfItemsInSection#&gt;;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+                  cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:&lt;#reuseIdentifier#&gt; forIndexPath:indexPath];
+    
+    [self configureCell:cell forItemAtIndexPath:indexPath];
+    
+    return cell;
+}
+
+- (void)configureCell:(UICollectionViewCell *)cell
+   forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    &lt;# statements #&gt;
+}
+
+  /**
+   * Vertically align a label within the frame
+   */
+- (id) verticallyAlign:(UILabel*)label withPosition:(UIControlContentVerticalAlignment) verticalAlignment {
+    CGRect rect = label.frame;
+    
+    if (verticalAlignment == UIControlContentVerticalAlignmentBottom || verticalAlignment == UIControlContentVerticalAlignmentTop) {
+        //	If one line, we can just use the lineHeight, faster than querying sizeThatFits
+        const CGFloat height = ((label.numberOfLines == 1) ? ceilf(label.font.lineHeight) : [label sizeThatFits:label.frame.size].height);
+        
+        if(height &lt; label.frame.size.height)
+            rect.origin.y = ((label.frame.size.height - height) / 2.0f) * ((verticalAlignment == UIControlContentVerticalAlignmentTop) ? -1.0f : 1.0f);
+        
+        label.frame = rect;
+    }
+    
+    return self;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>932EE6D8-4343-47EF-BF52-F5E0686FCDCA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string> Placeholders for essential UICollectionViewDataSource delegate methods</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UICollectionViewDataSource</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
